@@ -23,6 +23,6 @@ public class TopService extends CommandServiceAbstract {
      */
     public TopService() {
         this.setJobType(Job.TOP);
-        this.setRegexExpression("^\\-bn1$");
+        this.setRegexExpression("^-bn1$");
     }
 }

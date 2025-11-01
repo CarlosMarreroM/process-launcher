@@ -28,6 +28,6 @@ public class LsofService extends CommandServiceAbstract {
      */
     public LsofService() {
         this.setJobType(Job.LSOF);
-        this.setRegexExpression("^\\-i$");
+        this.setRegexExpression("^-i$");
     }
 }

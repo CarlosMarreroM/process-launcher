@@ -10,6 +10,8 @@ import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  * Clase abstracta que implementa parte común de los servicios de comandos.
  * 
@@ -20,7 +22,8 @@ public abstract class CommandServiceAbstract implements CommandService {
     private Job jobType;
     private String regexExpression;
 
-    JobRepository jobRepository;
+    @Autowired
+    protected JobRepository jobRepository;
 
     public String getCommand() {
         return command;
