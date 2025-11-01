@@ -1,0 +1,10 @@
+[OUT]     PID TTY          TIME CMD
+[OUT]    6375 pts/0    00:00:00 bash
+[OUT]  129900 pts/0    00:00:09 java
+[OUT]  129972 pts/0    00:00:02 java
+[OUT]  130686 pts/0    00:00:00 ps
+[OUT]     PID TTY          TIME CMD
+[OUT]    6375 pts/0    00:00:00 bash
+[OUT]  129900 pts/0    00:00:10 java
+[OUT]  129972 pts/0    00:00:02 java
+[OUT]  131076 pts/0    00:00:00 ps

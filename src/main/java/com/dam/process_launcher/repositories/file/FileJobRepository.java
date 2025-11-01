@@ -41,11 +41,17 @@ public class FileJobRepository implements JobRepository {
      * Si el fichero no existe, se crea automáticamente.
      */
     public FileJobRepository() {
-        if(fileName == null) {
-            fileName = "mis_procesos.txt";
+        this.fileName = "mis_procesos.txt";
+        this.path = Paths.get(System.getProperty("user.dir"), fileName);
+
+        // Si el archivo no existe, lo creamos vacío
+        try {
+            if (!Files.exists(path)) {
+                Files.createFile(path);
+            }
+        } catch (IOException e) {
+            System.err.println("[ERROR] No se pudo crear el archivo: " + e.getMessage());
         }
-        URL resource = getClass().getClassLoader().getResource(fileName);
-        path = Paths.get(resource.getPath());
     }
 
     /**
