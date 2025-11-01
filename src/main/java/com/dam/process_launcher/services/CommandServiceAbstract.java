@@ -38,11 +38,11 @@ public abstract class CommandServiceAbstract implements CommandService {
         this.jobType = jobType;
     }
 
-    public String getRegex() {
+    public String getRegexExpression() {
         return regexExpression;
     }
 
-    public void setRegex(String regex) {
+    public void setRegexExpression(String regex) {
         this.regexExpression = regex;
     }
 
