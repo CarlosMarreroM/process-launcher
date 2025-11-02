@@ -57,13 +57,19 @@ public abstract class CommandServiceAbstract implements CommandService {
         this.jobRepository = jobRepository;
     }
 
+    /**
+     * Procesa una línea de comando: valida su formato y la ejecuta si es correcta.
+     * 
+     * @param line línea de comando introducida por el usuario
+     * @return true si la ejecución fue exitosa, false si hubo error
+     */
     @Override
     public boolean processLine(String line) {
         String[] commandArray = line.split("\\s+");
         this.setCommand(commandArray[0]);
 
         if (!validate(commandArray)) {
-            System.out.println("El comando es inválido");
+            //System.out.println("El comando es inválido");
             return false;
         }
 
@@ -139,16 +145,17 @@ public abstract class CommandServiceAbstract implements CommandService {
             return false;
         }
 
-        if (arrayCommand.length - 1 == 0) {
+        /*if (arrayCommand.length - 1 == 0) {
             return true;
-        }
+        }*/
 
         String parameter = String.join(" ", Arrays.copyOfRange(arrayCommand, 1, arrayCommand.length));
 
         Pattern pattern = Pattern.compile(regexExpression);
         Matcher matcher = pattern.matcher(parameter);
         if (!matcher.find()) {
-            System.out.println("Los parámetros no cumplen el formato esperado");
+            System.out.println("[ERR] Los parámetros no cumplen el formato esperado");
+            jobRepository.add("[ERR] Los parámetros no cumplen el formato esperado");
             return false;
         }
 
@@ -163,7 +170,8 @@ public abstract class CommandServiceAbstract implements CommandService {
      */
     public boolean validateCommand() {
         if (!this.getCommand().toUpperCase().equals(getJobTypeAsString())) {
-            System.out.println("El comando es inválido");
+            System.out.println("[ERR] El comando es inválido");
+            jobRepository.add("[ERR] El comando es inválido");
             return false;
         }
         return true;

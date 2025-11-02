@@ -1,10 +1,20 @@
 [OUT]     PID TTY          TIME CMD
-[OUT]    6375 pts/0    00:00:00 bash
-[OUT]  129900 pts/0    00:00:09 java
-[OUT]  129972 pts/0    00:00:02 java
-[OUT]  130686 pts/0    00:00:00 ps
-[OUT]     PID TTY          TIME CMD
-[OUT]    6375 pts/0    00:00:00 bash
-[OUT]  129900 pts/0    00:00:10 java
-[OUT]  129972 pts/0    00:00:02 java
-[OUT]  131076 pts/0    00:00:00 ps
+[OUT]    4954 pts/0    00:00:00 bash
+[OUT]  114920 pts/0    00:00:09 java
+[OUT]  115024 pts/0    00:00:02 java
+[OUT]  115094 pts/0    00:00:00 ps
+Los parámetros no cumplen el formato esperado[OUT]     PID TTY          TIME CMD
+[OUT]    4954 pts/0    00:00:00 bash
+[OUT]  117141 pts/0    00:00:13 java
+[OUT]  117256 pts/0    00:00:02 java
+[OUT]  117324 pts/0    00:00:00 ps
+[ERR] Los parámetros no cumplen el formato esperado[OUT] USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+[OUT] root           1  0.0  0.0  23592 14776 ?        Ss   14:13   0:02 /sbin/init splash
+[OUT] root           2  0.0  0.0      0     0 ?        S    14:13   0:00 [kthreadd]
+[OUT] root           3  0.0  0.0      0     0 ?        S    14:13   0:00 [pool_workqueue_release]
+[OUT] root           4  0.0  0.0      0     0 ?        I<   14:13   0:00 [kworker/R-rcu_g]
+[OUT] root           5  0.0  0.0      0     0 ?        I<   14:13   0:00 [kworker/R-rcu_p]
+[OUT] root           6  0.0  0.0      0     0 ?        I<   14:13   0:00 [kworker/R-slub_]
+[OUT] root           7  0.0  0.0      0     0 ?        I<   14:13   0:00 [kworker/R-netns]
+[OUT] root           9  0.0  0.0      0     0 ?        I<   14:13   0:00 [kworker/0:0H-events_highpri]
+[OUT] root          12  0.0  0.0      0     0 ?        I<   14:13   0:00 [kworker/R-mm_pe]
